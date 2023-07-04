@@ -4,8 +4,8 @@ import CartWidget from '../CartWidget/CartWidget';
 function Navbar() {
     return (
         <div className='container-fluid contenedor-fluid-menu'>
-            <div className='container contenedor-menu'>
-                 <div className='brand-menu'>FAST-PC</div>
+            <header className='container contenedor-menu'>
+                 <h1 className='brand-menu'>FAST-PC</h1>
                  <nav className='nav-menu'>
                     <ul className='ul-menu'>
                         <li><a href="www.google.com" className='btn-menu'>Inicio</a></li>
@@ -14,7 +14,7 @@ function Navbar() {
                         <li><a href="www.google.com" className='btn-card'><CartWidget/></a></li>
                     </ul>
                  </nav>
-            </div>
+            </header>
         </div>
     );
   }
