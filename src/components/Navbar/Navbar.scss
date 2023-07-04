@@ -1,0 +1,36 @@
+body{
+    background-color: #282c34 !important;
+}
+
+.contenedor-fluid-menu{
+    box-shadow: 0px 1px 0px 0px #00a1ce; 
+}
+.contenedor-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        .brand-menu{
+            font-size: 40px;
+            color: #00a1ce;
+            font-weight: bold;
+        }
+        .nav-menu{
+                .ul-menu{
+                    display: flex;
+                    margin: 0 !important;
+                    li{
+                        list-style: none;
+                        a{ 
+                            padding: 20px;
+                            display: block;
+                            font-size: 20px;
+                            color: #00a1ce;
+                            text-decoration: none;
+                            &:hover{
+                                color: #61dafb;
+                            }
+                        }
+                    }
+                }    
+        }
+}
