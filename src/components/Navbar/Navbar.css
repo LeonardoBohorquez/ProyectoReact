@@ -15,6 +15,7 @@ body {
   font-size: 40px;
   color: #00a1ce;
   font-weight: bold;
+  margin-bottom: 0 !important;
 }
 .contenedor-menu .nav-menu .ul-menu {
   display: flex;
