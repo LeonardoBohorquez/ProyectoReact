@@ -8,10 +8,10 @@ function Navbar() {
                  <h1 className='brand-menu'>FAST-PC</h1>
                  <nav className='nav-menu'>
                     <ul className='ul-menu'>
-                        <li><a href="www.google.com" className='btn-menu'>Inicio</a></li>
-                        <li><a href="www.google.com" className='btn-menu'>Tienda</a></li>
-                        <li><a href="www.google.com" className='btn-menu'>Soporte</a></li>
-                        <li><a href="www.google.com" className='btn-card'><CartWidget/></a></li>
+                        <li><a href="#" className='btn-menu'>Inicio</a></li>
+                        <li><a href="#" className='btn-menu'>Tienda</a></li>
+                        <li><a href="#" className='btn-menu'>Soporte</a></li>
+                        <li><a href="#" className='btn-card'><CartWidget/><span className='number'>0</span></a></li>
                     </ul>
                  </nav>
             </header>
