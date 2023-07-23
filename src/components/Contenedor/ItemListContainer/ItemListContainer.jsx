@@ -8,6 +8,7 @@ function ItemListContainer(){
     return(
         <main className="container contenedor-items">
                 <div className="row">{productosComputacion.map( (item) => {
+                    //renderizamos el catalago
                     return <div className='col col-md-4 col-lg-4 tarjeta'>
                                 <img  className="img-fluid" src={imagen} alt={item.nombre} />
                                 <h2 className=''>{item.nombre}</h2>

@@ -3,7 +3,7 @@ export const productosComputacion = [
       nombre: "GAMING PC 1",
       precio: 1000,
       imagen: "http://ximg.es/600x400/000/fff",
-      descripción: "Experimenta el rendimiento definitivo con nuestra PC Gaming de Gama Alta! Diseñada para los jugadores más exigentes, esta potente máquina redefine los límites de la experiencia de juego.",
+      descripción: "Experimenta el rendimiento definitivo con nuestra PC Gaming de Gama:: Alta! Diseñada para los jugadores más exigentes, esta potente máquina redefine los límites de la experiencia de juego.",
       id: 1,
       category: {"id": 1,"nombre":"Gama: ALTA "},
       marca: 'AMD',
@@ -15,7 +15,7 @@ export const productosComputacion = [
       imagen: "http://ximg.es/600x400/000/fff",
       descripción: "Pantalla de ALTA  resolución para una experiencia visual inmersiva.",
       id: 2,
-      category: {"id": 1,"nombre":"Gama: MEDIA "},
+      category: {"id": 1,"nombre":"Gama: ALTA "},
       marca: 'AMD',
       stock: 2
     },
@@ -25,10 +25,9 @@ export const productosComputacion = [
       imagen: "http://ximg.es/600x400/000/fff",
       descripción: "Teclado ergonómico con retroiluminación para mayor comodidad.",
       id: 3,
-      category: {"id": 1,"nombre":"Gama ALTA "},
+      category: {"id": 1,"nombre":"Gama: ALTA "},
       marca: 'AMD',
       stock: 1
-      
     },
     {
       nombre: "GAMING PC 4",
@@ -36,7 +35,7 @@ export const productosComputacion = [
       imagen: "http://ximg.es/600x400/000/fff",
       descripción: "Mouse óptico de ALTA  precisión para una navegación fluida.",
       id: 4,
-      category: {"id": 2,"nombre":"Gama MEDIA "},
+      category: {"id": 2,"nombre":"Gama: MEDIA "},
       marca: 'AMD',
       stock: 5
     },
@@ -76,7 +75,7 @@ export const productosComputacion = [
       imagen: "altavoces.jpg",
       descripción: "Altavoces estéreo para disfrutar de un soniItemCategoryContainerdo envolvente.",
       id: 8,
-      category: {"id": 3,"nombre":"Gama Baja "},
+      category: {"id": 3,"nombre":"Gama: BAJA"},
       marca: 'INTEL',
       stock: 10
     },
@@ -86,7 +85,7 @@ export const productosComputacion = [
       imagen: "camara_web.jpg",
       descripción: "Cámara web de ALTA  definición para videoconferencias y streaming.",
       id: 9,
-      category: {"id": 3,"nombre":"Gama Baja "},
+      category: {"id": 3,"nombre":"Gama: BAJA "},
       marca: 'INTEL',
       stock: 8
     }
