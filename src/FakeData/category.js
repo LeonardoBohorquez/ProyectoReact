@@ -1,5 +1,5 @@
 export const listaCategoria = [
-    {id: 1, nombre: "Gama alta"},
-    {id: 2, nombre: "Gama media"},
-    {id: 3, nombre: "Gama baja"}
+    {id: 1, nombre: "Gama Alta"},
+    {id: 2, nombre: "Gama Media"},
+    {id: 3, nombre: "Gama Baja"}
 ]

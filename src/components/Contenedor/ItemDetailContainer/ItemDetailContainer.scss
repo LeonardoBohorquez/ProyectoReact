@@ -1,0 +1,55 @@
+.container-detail{
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item-detail{
+    display: flex;
+    width: 45%;
+    align-items: center;
+    flex-direction: column;
+    .img-detail-container{
+        box-shadow: 0px 0px 10px 1px  #00a1ce;
+    }
+}
+
+.titulo-detail{
+    width: 100%;
+    color:  #00a1ce;
+    font-size: 50px;
+}
+
+.img-detail-container{
+    color:  #00a1ce;
+}
+
+.btn-stock{
+    border: none;
+    font-size: 25px;
+    color:  #00a1ce;
+    background-color: transparent;
+}
+
+.number-stock{
+    font-size: 25px;
+}
+
+.anadir-carrito{
+    width: 100%;
+    color: #00a1ce;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid  #00a1ce;;
+    background-color: transparent;
+    &:hover{
+        background-color:  #025870 !important;
+    }
+}
+
+.detail{
+    margin: 20px;
+}
+.container-stock{
+    text-align: center;
+}

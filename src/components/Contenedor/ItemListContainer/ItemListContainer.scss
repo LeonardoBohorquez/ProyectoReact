@@ -1,0 +1,23 @@
+.contenedor-items{
+    
+    margin-top: 100px;
+
+}
+
+.tarjeta{
+    margin-bottom: 20px;
+    color: #00a1ce;
+
+}
+
+.btn{
+    width: 100%;
+    color:  #00a1ce !important;
+    border-radius: 0px !important;
+    background-color:  transparent !important;
+    box-shadow: 0px 0px 1px 1px  #00a1ce;
+    &:hover{
+        background-color:  #025870 !important;
+    }
+}
+

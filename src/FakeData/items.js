@@ -1,84 +1,87 @@
 export const productosComputacion = [
     {
-      nombre: "Laptop",
+      nombre: "GAMING PC 1",
       precio: 1000,
-      imagen: "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGMlMjBnYW1pbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
-      descripción: "Potente computadora portátil para trabajo y entretenimiento.",
+      imagen: "http://ximg.es/600x400/000/fff",
+      descripción: "Experimenta el rendimiento definitivo con nuestra PC Gaming de Gama Alta! Diseñada para los jugadores más exigentes, esta potente máquina redefine los límites de la experiencia de juego.",
       id: 1,
-      category: {"id": 1,"nombre":"Gama alta"}
+      category: {"id": 1,"nombre":"Gama: ALTA "},
+      marca: 'AMD'
     },
     {
-      nombre: "Monitor",
-      precio: 300,
-      imagen: "monitor.jpg",
-      descripción: "Pantalla de alta resolución para una experiencia visual inmersiva.",
+      nombre: "GAMING PC 2",
+      precio: 1220,
+      imagen: "http://ximg.es/600x400/000/fff",
+      descripción: "Pantalla de ALTA  resolución para una experiencia visual inmersiva.",
       id: 2,
-      category: {"id": 1,"nombre":"Gama alta"}
+      category: {"id": 1,"nombre":"Gama: MEDIA "},
+      marca: 'AMD'
+      
+  
     },
     {
-      nombre: "Teclado",
-      precio: 50,
-      imagen: "teclado.jpg",
+      nombre: "GAMING PC 3",
+      precio: 1500,
+      imagen: "http://ximg.es/600x400/000/fff",
       descripción: "Teclado ergonómico con retroiluminación para mayor comodidad.",
       id: 3,
-      category: {"id": 1,"nombre":"Gama alta"}
+      category: {"id": 1,"nombre":"Gama ALTA "},
+      marca: 'AMD'
+      
     },
-    // Agrega más objetos según tus necesidades
     {
-      nombre: "Mouse",
-      precio: 20,
-      imagen: "mouse.jpg",
-      descripción: "Mouse óptico de alta precisión para una navegación fluida.",
+      nombre: "GAMING PC 4",
+      precio: 800,
+      imagen: "http://ximg.es/600x400/000/fff",
+      descripción: "Mouse óptico de ALTA  precisión para una navegación fluida.",
       id: 4,
-      category: {"id": 1,"nombre":"Gama alta"}
+      category: {"id": 2,"nombre":"Gama MEDIA "},
+      marca: 'AMD'
     },
     {
-      nombre: "Impresora",
-      precio: 150,
-      imagen: "impresora.jpg",
+      nombre: "GAMING PC 5",
+      precio: 750,
+      imagen: "http://ximg.es/600x400/000/fff",
       descripción: "Impresora multifuncional para imprimir, escanear y copiar documentos.",
       id: 5,
-      category: {"id": 1,"nombre":"Gama alta"}
+      category: {"id": 2,"nombre":"Gama: MEDIA "},
+      marca: 'AMD'
     },
     {
-      nombre: "Disco duro externo",
-      precio: 80,
-      imagen: "disco_duro.jpg",
-      descripción: "Almacenamiento portátil de alta capacidad para tus archivos.",
+      nombre: "GAMING PC 6",
+      precio: 850,
+      imagen: "http://ximg.es/600x400/000/fff",
+      descripción: "Almacenamiento portátil de ALTA  capacidad para tus archivos.",
       id: 6,
-      category: {"id": 1,"nombre":"Gama alta"}
+      category: {"id": 2,"nombre":"Gama: MEDIA "},
+      marca: 'INTEL'
     },
     {
-      nombre: "Router",
-      precio: 80,
-      imagen: "router.jpg",
+      nombre: "GAMING PC 7",
+      precio: 500,
+      imagen: "http://ximg.es/600x400/000/fff",
       descripción: "Router inalámbrico para una conexión a Internet estable.",
       id: 7,
-      category: {"id": 1,"nombre":"Gama alta"}
+      category: {"id": 3,"nombre":"Gama: BAJA "},
+      marca: 'INTEL'
     },
     {
-      nombre: "Altavoces",
-      precio: 60,
+      nombre: "GAMING PC 8",
+      precio: 450,
       imagen: "altavoces.jpg",
       descripción: "Altavoces estéreo para disfrutar de un soniItemCategoryContainerdo envolvente.",
       id: 8,
-      category: {"id": 1,"nombre":"Gama alta"}
+      category: {"id": 3,"nombre":"Gama Baja "},
+      marca: 'INTEL'
     },
     {
-      nombre: "Cámara web",
-      precio: 40,
+      nombre: "GAMING PC 9",
+      precio: 550,
       imagen: "camara_web.jpg",
-      descripción: "Cámara web de alta definición para videoconferencias y streaming.",
+      descripción: "Cámara web de ALTA  definición para videoconferencias y streaming.",
       id: 9,
-      category: {"id": 2,"nombre":"Gama media"}
-    },
-    {
-      nombre: "Memoria RAM",
-      precio: 80,
-      imagen: "memoria_ram.jpg",
-      descripción: "Memoria RAM de alta velocidad para mejorar el rendimiento del sistema.",
-      id: 10,
-      category: {"id": 3,"nombre":"Gama baja"}
+      category: {"id": 3,"nombre":"Gama Baja "},
+      marca: 'INTEL'
     }
   ];
 
