@@ -6,7 +6,8 @@ export const productosComputacion = [
       descripción: "Experimenta el rendimiento definitivo con nuestra PC Gaming de Gama Alta! Diseñada para los jugadores más exigentes, esta potente máquina redefine los límites de la experiencia de juego.",
       id: 1,
       category: {"id": 1,"nombre":"Gama: ALTA "},
-      marca: 'AMD'
+      marca: 'AMD',
+      stock: 3
     },
     {
       nombre: "GAMING PC 2",
@@ -15,9 +16,8 @@ export const productosComputacion = [
       descripción: "Pantalla de ALTA  resolución para una experiencia visual inmersiva.",
       id: 2,
       category: {"id": 1,"nombre":"Gama: MEDIA "},
-      marca: 'AMD'
-      
-  
+      marca: 'AMD',
+      stock: 2
     },
     {
       nombre: "GAMING PC 3",
@@ -26,7 +26,8 @@ export const productosComputacion = [
       descripción: "Teclado ergonómico con retroiluminación para mayor comodidad.",
       id: 3,
       category: {"id": 1,"nombre":"Gama ALTA "},
-      marca: 'AMD'
+      marca: 'AMD',
+      stock: 1
       
     },
     {
@@ -36,7 +37,8 @@ export const productosComputacion = [
       descripción: "Mouse óptico de ALTA  precisión para una navegación fluida.",
       id: 4,
       category: {"id": 2,"nombre":"Gama MEDIA "},
-      marca: 'AMD'
+      marca: 'AMD',
+      stock: 5
     },
     {
       nombre: "GAMING PC 5",
@@ -45,7 +47,8 @@ export const productosComputacion = [
       descripción: "Impresora multifuncional para imprimir, escanear y copiar documentos.",
       id: 5,
       category: {"id": 2,"nombre":"Gama: MEDIA "},
-      marca: 'AMD'
+      marca: 'AMD',
+      stock: 3
     },
     {
       nombre: "GAMING PC 6",
@@ -54,7 +57,8 @@ export const productosComputacion = [
       descripción: "Almacenamiento portátil de ALTA  capacidad para tus archivos.",
       id: 6,
       category: {"id": 2,"nombre":"Gama: MEDIA "},
-      marca: 'INTEL'
+      marca: 'INTEL',
+      stock: 1
     },
     {
       nombre: "GAMING PC 7",
@@ -63,7 +67,8 @@ export const productosComputacion = [
       descripción: "Router inalámbrico para una conexión a Internet estable.",
       id: 7,
       category: {"id": 3,"nombre":"Gama: BAJA "},
-      marca: 'INTEL'
+      marca: 'INTEL',
+      stock: 6
     },
     {
       nombre: "GAMING PC 8",
@@ -72,7 +77,8 @@ export const productosComputacion = [
       descripción: "Altavoces estéreo para disfrutar de un soniItemCategoryContainerdo envolvente.",
       id: 8,
       category: {"id": 3,"nombre":"Gama Baja "},
-      marca: 'INTEL'
+      marca: 'INTEL',
+      stock: 10
     },
     {
       nombre: "GAMING PC 9",
@@ -81,7 +87,8 @@ export const productosComputacion = [
       descripción: "Cámara web de ALTA  definición para videoconferencias y streaming.",
       id: 9,
       category: {"id": 3,"nombre":"Gama Baja "},
-      marca: 'INTEL'
+      marca: 'INTEL',
+      stock: 8
     }
   ];
 

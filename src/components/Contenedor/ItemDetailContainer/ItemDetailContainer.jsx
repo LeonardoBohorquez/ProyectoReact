@@ -10,8 +10,9 @@ export const ItemDetailContainer = () => {
     const {id} = useParams()
     const item = productosComputacion.find(( item ) => Number(item.id) === Number(id))
     const [cantidad, setCantidad] = useState( 1 )
-    console.log(useParams())
-  return (           
+
+  return (      
+    // Armamos la card del item con los detalles     
         <main className='container container-detail'>  {item !== undefined ? 
           <div className='item-detail'>
             <div className='img-detail-container'>
@@ -21,11 +22,12 @@ export const ItemDetailContainer = () => {
                 <h3>Procesador: {item.marca} </h3>
                 <h3>Precio: {item.precio}$ </h3>
                 <h3>{item.category.nombre}</h3>
+                <h3>Stock: {item.stock}</h3>
                 <p> {item.descripción} </p>
                 <div className='container-stock'>
-                  <button className='btn-stock' onClick={()=> setCantidad (cantidad - 1) }><BtnRemove/></button>
+                  <button className='btn-stock' onClick={() => cantidad > 1 && setCantidad(cantidad - 1)}><BtnRemove/></button>
                   <span className='number-stock'> {cantidad} </span>
-                  <button className='btn-stock' onClick={()=> setCantidad (cantidad + 1) }><BtnAdd/></button>
+                  <button className='btn-stock' onClick={()=> cantidad < item.stock && setCantidad(cantidad + 1) }><BtnAdd/></button>
                   <button className='anadir-carrito'>Añadir al carrito</button>
                 </div>
               </div>
