@@ -11,7 +11,7 @@ function Navbar() {
                     <ul className='ul-menu-category'>
                         <li className='gama '> {listaCategoria.map( (category) => {
                                 /* Aqui tiene que ir una tarjeta que muestre cada producto con su imagen,precio, y todos los detalles ye l boton de "mas info.." */
-                             return <div className='item'><Link className='' to= {`/category/${category.id}`} > {category.nombre} </Link></div>
+                             return <div key={category.id} className='item'><Link className='' to= {`/category/${category.id}`} > {category.nombre} </Link></div>
                             })} 
                         </li>  
                     </ul>
