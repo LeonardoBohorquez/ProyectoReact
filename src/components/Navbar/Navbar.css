@@ -43,14 +43,14 @@ body {
 }
 
 .ul-menu-category {
+  display: flex;
   margin: 0;
 }
 
 .gama {
-  display: flex;
   margin: 0 !important;
   font-size: 20px;
-  text-decoration: none;
+  list-style: none;
   justify-content: center;
   align-items: center;
   color: #fff !important;
@@ -61,12 +61,15 @@ body {
   display: block;
   font-size: 20px;
   color: #00a1ce;
-  text-decoration: none;
 }
 .gama a:hover {
   color: #61dafb;
 }
 
-.item {
-  color: #fff !important;
+.cart {
+  color: #00a1ce;
+  text-decoration: none;
+}
+.cart:hover {
+  color: #61dafb;
 }/*# sourceMappingURL=Navbar.css.map */
