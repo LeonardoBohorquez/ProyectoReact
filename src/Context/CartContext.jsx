@@ -1,14 +1,14 @@
 import { useState, createContext } from "react";
+import Swal from 'sweetalert2';
+
 
 const cartContext = createContext({ cart: [] });
-
-// Custom provider
-// CartContextProvider (custom componente) !== cartContext.Provider (componente default)
 
 function CartContextProvider(props) {
   const [cart, setCart] = useState([]);
 
   function addToCart(product, count) {
+
     const newCart = [...cart];
     if (isInCart(product.id)) {
       const indexUpdate = cart.findIndex((item) => item.id === product.id);
@@ -18,8 +18,14 @@ function CartContextProvider(props) {
       const newItemInCart = { ...product, count };
       newCart.push(newItemInCart);
       setCart(newCart);
-      //setCart( [...cart, { ...product, count}]) -> otra forma de hacerlo
     }
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Producto agregado al carrito',
+      showConfirmButton: false,
+      timer: 2000
+    })
   }
 
   function isInCart(id) {
@@ -31,12 +37,48 @@ function CartContextProvider(props) {
   }
 
   function removeItem(id) {
-    setCart(cart.filter((item) => item.id !== id));
+    
+    Swal.fire({
+      title: '¿Quieres eliminar este producto del carrito?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Borrado!',
+          'Eliminado del carrito',
+          'success',
+          setCart(cart.filter((item) => item.id !== id))
+        )
+      }
+    })
+    
+  }
+
+  function cancelPurchase(){
+
+    Swal.fire({
+      title: '¿Quieres cancelar la compra?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'De vuelta a cart'
+        )
+      }
+    })
+
   }
 
   function clearCart() {
-    return null;
-    // vaciar el carrito
+    return cart.splice(0)
   }
 
   function getTotalItemsInCart() {
@@ -63,6 +105,7 @@ function CartContextProvider(props) {
         addToCart,
         removeItem,
         clearCart,
+        cancelPurchase,
         getTotalItemsInCart,
         getTotalPriceInCart,
       }}
