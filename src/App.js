@@ -6,7 +6,6 @@ import { CartItem } from './components/Cart/CartItem/CartItem';
 import { CheckoutForm } from './components/Cart/CheckoutForm/CheckoutForm';
 import { CartContextProvider } from './Context/CartContext';
 
-
 function App() {
   return (
     <>

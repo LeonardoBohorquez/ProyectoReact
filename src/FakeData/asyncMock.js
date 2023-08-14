@@ -111,28 +111,37 @@ export const PcGaming = [
   }
 ];
 
+function getData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const date = new Date().toLocaleDateString;
+      resolve(PcGaming, date);
+    }, 2000);
+  });
+}
 
-/* Funcion que mostrara todas las PC */
-  export const getPcs = () => {
-    return new Promise ((resolve) =>{
-        setTimeout(() => {
-            resolve(PcGaming)
-        }, 2000)
-    })
-  }
-/* Funcion que solo mostrara el PC por ID */
-  export const getPcsId = (pcId) => {
-    return new Promise ((resolve) =>{
-        setTimeout(() => {
-            resolve(PcGaming.find(pc => pc.id === pcId ))
-        }, 2000)
-    })
-  }
-/* Funcion que solo mostrara las PC segun su categoria */
-  export const getPcsCategory = (pcCategory) => {
-    return new Promise ((resolve) =>{
-        setTimeout(() => {
-            resolve(PcGaming.filter(pc => pc.categoria === pcCategory))
-        }, 2000)
-    })
-  }
+export function getProductData(idURL) {
+  return new Promise((resolve, reject) => {
+    const productRequested = PcGaming.find(
+      (item) => item.id === Number(idURL)
+    );
+
+    setTimeout(() => {
+      resolve(productRequested);
+    }, 2000);
+  });
+}
+
+export function getCategoryData(categoryURL) {
+  return new Promise((resolve, reject) => {
+    const categoryRequested = PcGaming.filter((item) => {
+      return item.categoria.toLowerCase() === categoryURL.toLowerCase();
+    });
+
+    setTimeout(() => {
+      resolve(categoryRequested);
+    }, 2000);
+  });
+}
+
+export default getData;

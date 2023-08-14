@@ -1,19 +1,27 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { cartContext } from '../../../Context/CartContext'
 import { useParams } from 'react-router-dom'
-import { PcGaming} from '../../../FakeData/asyncMock'
+import { getProductData } from '../../../FakeData/firebase'
 import imagen from '../../../Assets/IMG.JPG'
 import BtnRemove from './Botones/BtnRemove'
 import BtnAdd from './Botones/BtnAdd'
 import './ItemDetailContainer.css'
 
-
-
 export const ItemDetailContainer = () => {
     const {id} = useParams()
-    const item = PcGaming.find(( item ) => Number(item.id) === Number(id))
+    const [item, setItem] = useState({});
     const [cantidad, setCantidad] = useState( 1 )
     const {addToCart} = useContext(cartContext)
+    /*  const item = PcGaming.find(( item ) => Number(item.id) === Number(id)) */
+
+    useEffect(() => {
+      async function requestProduct() {
+        const respuesta = await getProductData(id);
+        setItem(respuesta);
+      }
+  
+      requestProduct();
+    }, [id]);
     
   return (        
         <main className='container container-detail'>  {item !== undefined ? 

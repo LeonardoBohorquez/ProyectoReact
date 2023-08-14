@@ -51,9 +51,10 @@
     color: #00a1ce !important;
 }
 
-.comprar{
+.comprar, .borrar-todo{
     width: 150px;
     border: none;
+    margin-right: 25px;
     padding: 10px;
     text-decoration: none;
     color: #00a1ce !important;

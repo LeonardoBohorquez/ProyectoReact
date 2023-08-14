@@ -76,11 +76,27 @@ function CartContextProvider(props) {
     })
 
   }
-
   function clearCart() {
-    return cart.splice(0)
+    Swal.fire({
+      title: '¿Quieres vaciar el carrito?',
+      text: 'Esta acción eliminará todos los productos del carrito.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, vaciar carrito'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setCart([]); // Vaciar el carrito estableciendo un nuevo array vacío
+        Swal.fire(
+          'Carrito vaciado',
+          'El carrito ha sido vaciado correctamente.',
+          'success'
+        );
+      }
+    });
   }
-
+  
   function getTotalItemsInCart() {
     let total = 0;
     cart.forEach((item) => {

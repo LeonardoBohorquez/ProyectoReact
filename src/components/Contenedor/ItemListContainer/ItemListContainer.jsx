@@ -1,5 +1,7 @@
 
-import { PcGaming} from '../../../FakeData/asyncMock'
+/* import { PcGaming} from '../../../FakeData/asyncMock' */
+import { getData } from '../../../FakeData/firebase'
+import { getCategoryData } from '../../../FakeData/asyncMock'
 import { Link, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Grid } from  'react-loader-spinner'
@@ -12,7 +14,7 @@ function ItemListContainer(){
     const [isLoading, setIsLoading] = useState(true);
    
 
-    useEffect(() => {
+    /* useEffect(() => {
         setIsLoading(true);
         const fetchData = async () => {
             await new Promise((resolve) => setTimeout(resolve, 1500));
@@ -26,7 +28,20 @@ function ItemListContainer(){
           };
           fetchData();
 
-    }, [categoryId])
+    }, [categoryId]) */
+
+    useEffect(() => {
+      setIsLoading(true);
+      async function requestProducts() {
+        let respuesta = categoryId
+          ? await getCategoryData(categoryId)
+          : await getData();
+        setItems(respuesta);
+        setIsLoading(false);
+      }
+  
+      requestProducts();
+    }, [categoryId]);
 
     if (isLoading) {
 
