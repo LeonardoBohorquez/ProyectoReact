@@ -1,0 +1,37 @@
+
+.container h1 {
+    color:  #00a1ce;
+    text-align: center;
+}
+
+.factura{
+    display: grid;
+    justify-content: center;
+}
+
+.btn-nueva-compra{
+    display: block;
+    text-align: center;
+}
+.compra{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+}
+.detalle-compra{
+    margin: 50px 0px 10px 0px;
+    font-size: 22px;
+    color: #00a1ce;
+    text-align: center;
+}
+
+.small{
+    width: 400px;
+    margin: 5px 0px;
+    border: 1px solid #00a1ce !important;
+}
+
+.total-pago{
+    color: #00a1ce;
+    text-align: center;
+}

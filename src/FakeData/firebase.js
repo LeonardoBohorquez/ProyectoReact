@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, doc, getDoc } from "firebase/firestore"
+import { getFirestore, collection, getDocs, doc, getDoc, where, query, addDoc} from "firebase/firestore"
 
 const firebaseConfig = {
   apiKey: "AIzaSyCrKgjPQvR7FnTVSrSWz7i04puR8TFhq2A",
@@ -23,7 +23,6 @@ async function getData(){
   })
   return docsData;
 }
-
 async function getProductData(id) {
   const docRef = doc(db, "PcGaming", id);
   const docSnapshot = await getDoc(docRef);
@@ -34,4 +33,26 @@ async function getProductData(id) {
     throw new Error("Producto no encontrado");
   }
 }
-export { getData, getProductData};
+async function getCategoryData(categoria) {
+  const productsRef = collection(db, "PcGaming",);
+  const q = query(productsRef, where("categoria", "==", categoria));
+  const documentsSnapshot = await getDocs(q);
+
+  const documents = documentsSnapshot.docs;
+
+  return documents.map((item) => ({ ...item.data(), id: item.id }));
+}
+async function createOrder(orderData){
+  const collectionRef = collection(db, "orders")
+  const docCreated = await addDoc(collectionRef, orderData)
+
+  return(docCreated.id)
+}
+async function getOrder(id){
+  const docRef = doc(db, "orders", id);
+  const docSnapshot = await getDoc(docRef);
+
+  return { ...docSnapshot.data(), id: docSnapshot.id };
+}
+
+export { getData, getProductData, getCategoryData, createOrder, getOrder};

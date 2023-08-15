@@ -1,8 +1,10 @@
 import React, { useContext, useState } from 'react'
 import { cartContext } from '../../../Context/CartContext'
 import { useNavigate } from "react-router-dom";
+import { createOrder } from '../../../FakeData/firebase';
 import './CheckoutForm.css'
 import Swal from 'sweetalert2';
+
 
 export const CheckoutForm = () => {
   const [buyer, setBuyer] = useState({
@@ -14,7 +16,23 @@ export const CheckoutForm = () => {
   });
 
   const navigate = useNavigate();
-  const { cart, getTotalPriceInCart } = useContext(cartContext);
+  const { cart, getTotalPriceInCart} = useContext(cartContext);
+
+  async function handleCheckout(evt) {
+    evt.preventDefault();
+    const orderData = {
+      items: cart,
+      buyer: buyer,
+      total: getTotalPriceInCart(),
+    };
+
+    try {
+      const idOrder = await createOrder(orderData);
+      navigate(`/order-confirmation/${idOrder}`);
+    } catch (error) {
+      alert(`No se pudo realizar la compra ${error.message}`);
+    }
+  }
 
   function onInputChange(evt) {
     const value = evt.target.value;
@@ -68,7 +86,7 @@ export const CheckoutForm = () => {
         <input placeholder='Correo' value={buyer.correo} name="correo" type="email" onChange={onInputChange} required/>
       </div>
       <div className='btn-formulario'>
-        <button className='btn-comprar' disabled={!(buyer.nombre !== "" && buyer.apellido !== "" && buyer.celular !== "" && buyer.direccion !== "" && buyer.correo !== "")}> Confirmar</button>
+        <button className='btn-comprar' onClick={handleCheckout} disabled={!(buyer.nombre !== "" && buyer.apellido !== "" && buyer.celular !== "" && buyer.direccion !== "" && buyer.correo !== "")}> Confirmar</button>
         <button  className='btn-reiniciar' onClick={resetForm}>Reiniciar</button>
         <button  className='btn-cancelar' onClick={cancelPurchase}>Cancelar</button>
       </div>

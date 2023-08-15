@@ -12,7 +12,6 @@ export const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
     const [cantidad, setCantidad] = useState( 1 )
     const {addToCart} = useContext(cartContext)
-    /*  const item = PcGaming.find(( item ) => Number(item.id) === Number(id)) */
 
     useEffect(() => {
       async function requestProduct() {

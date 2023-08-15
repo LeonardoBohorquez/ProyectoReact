@@ -76,7 +76,7 @@ function CartContextProvider(props) {
     })
 
   }
-  function clearCart() {
+  function clearAllCart() {
     Swal.fire({
       title: '¿Quieres vaciar el carrito?',
       text: 'Esta acción eliminará todos los productos del carrito.',
@@ -87,7 +87,7 @@ function CartContextProvider(props) {
       confirmButtonText: 'Sí, vaciar carrito'
     }).then((result) => {
       if (result.isConfirmed) {
-        setCart([]); // Vaciar el carrito estableciendo un nuevo array vacío
+        setCart([]); 
         Swal.fire(
           'Carrito vaciado',
           'El carrito ha sido vaciado correctamente.',
@@ -95,6 +95,10 @@ function CartContextProvider(props) {
         );
       }
     });
+  }
+
+  function clearCart(){
+    return setCart([]); 
   }
   
   function getTotalItemsInCart() {
@@ -120,6 +124,7 @@ function CartContextProvider(props) {
         cart,
         addToCart,
         removeItem,
+        clearAllCart,
         clearCart,
         cancelPurchase,
         getTotalItemsInCart,
